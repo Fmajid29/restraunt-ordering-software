@@ -8,71 +8,64 @@
   justify-content: center;
 }
 
-
-.loginlogo
-{
-height: 155.9044494628906px;
+.loginlogo {
+  height: 155.9044494628906px;
   width: 350px;
   border-radius: 0px;
 }
-.loginInput
-{
-  width:200px;
+.loginInput {
+  width: 200px;
   height: 30px;
   border-radius: 25px;
   border: 1px solid black !important;
   padding-left: 10px;
 }
 .lableStyle {
-    display: flex;
-    font-family: Hind Vadodara;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 33px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: white;
-  } 
-  .genreStyle{
-    width: 220px;
-    height: 32px;
-    background-color: white;
-    border-radius:  30px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .lableStyleDropdown
-  {
-    display: flex;
-    font-family: Hind Vadodara;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 33px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: white;
-    width:205px !important;
-  }
-  .loginButton
-  {
-    width:230px;
-    background-color: #213FC4;
-    height:35px;
-    color: white;
-    border-radius: 5%;
-    cursor: pointer;
-    border-radius: 1px solid #213FC4;
-  }
-  .buttonContainer
-  {
-    padding-top: 10px;
-    cursor: pointer;
-  }
-  @media only screen and (max-width: 500px) {
-    .loginlogo
-    {
+  display: flex;
+  font-family: Hind Vadodara;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}
+.genreStyle {
+  width: 220px;
+  height: 32px;
+  background-color: white;
+  border-radius: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.lableStyleDropdown {
+  display: flex;
+  font-family: Hind Vadodara;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  width: 205px !important;
+}
+.loginButton {
+  width: 230px;
+  background-color: #213fc4;
+  height: 35px;
+  color: white;
+  border-radius: 5%;
+  cursor: pointer;
+  border-radius: 1px solid #213fc4;
+}
+.buttonContainer {
+  padding-top: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  .loginlogo {
     height: 130.9044494628906px;
-      width: 250px;
-      border-radius: 0px;
-    }
+    width: 250px;
+    border-radius: 0px;
   }
+}
