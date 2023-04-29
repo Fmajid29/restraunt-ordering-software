@@ -1,5 +1,5 @@
 .mainContainer {
-  background-color: grey;
+  background-color:#F1F4F9;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -31,7 +31,8 @@ height: 155.9044494628906px;
     line-height: 33px;
     letter-spacing: 0em;
     text-align: center;
-    color: white;
+    color: black;
+    font-family: 'Montage';
   } 
   .genreStyle{
     width: 220px;
@@ -50,8 +51,10 @@ height: 155.9044494628906px;
     line-height: 33px;
     letter-spacing: 0em;
     text-align: center;
-    color: white;
+    color: black;
     width:205px !important;
+    font-family: 'Montage';
+    
   }
   .loginButton
   {
