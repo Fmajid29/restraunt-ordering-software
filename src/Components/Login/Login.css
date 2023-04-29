@@ -1,5 +1,5 @@
 .mainContainer {
-  background-color: #f1f4f9;
+  background-color: #f5f3f3;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -28,7 +28,7 @@
   line-height: 33px;
   letter-spacing: 0em;
   text-align: center;
-  color: white;
+  color: black;
 }
 .genreStyle {
   width: 220px;
@@ -46,7 +46,7 @@
   line-height: 33px;
   letter-spacing: 0em;
   text-align: center;
-  color: white;
+  color: black;
   width: 205px !important;
 }
 .loginButton {
