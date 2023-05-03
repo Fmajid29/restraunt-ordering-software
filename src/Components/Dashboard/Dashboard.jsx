@@ -1,12 +1,7 @@
 import React from "react";
-import "./Dashboard.css"
+import "./Dashboard.css";
 
-const Dashboard=()=>
-{
-    return(
-        <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <h>hello MAMU do you like my work?</h>
-        </div>
-    )
-}
+const Dashboard = () => {
+  return <></>;
+};
 export default Dashboard;
