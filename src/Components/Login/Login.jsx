@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   const handleClick = () => {
-    navigate("/dashboard");
+    navigate("/tables");
   };
 
   return (
