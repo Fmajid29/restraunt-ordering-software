@@ -1,0 +1,120 @@
+.innerBill
+{
+    display: flex;
+    flex-direction: row;
+    border:1px solid blue;
+    width:900px;
+    height:400px;
+    justify-content: space-between;
+}
+.headingBill
+{
+height: 57px;
+width: 252.6655731201172px;
+left: 140px;
+top: 201px;
+border-radius: nullpx;
+color: #213FC4;
+font-size: 35px;
+
+padding-left: 5px;
+}
+.decrement
+{
+    color: #213FC4;
+    font-size: 35px;
+    padding-left:5px !important;
+    cursor: pointer;
+}
+.billStyle
+{
+    display: flex;
+    flex-direction: row;
+    width:50%;
+    justify-content: space-around;
+    border-bottom:2PX SOLID #213FC4;
+    height: 50px;
+}
+.buttonBill
+{
+    height: 58.109703063964844px;
+width: 196.35763549804688px;
+left: 1034.059814453125px;
+top: 694px;
+border-radius: 21.079010009765625px;
+font-size: 18px;
+background-color: #213FC4;
+color: white;
+cursor: pointer;
+}
+.buttonBill1
+{
+    height: 40px;
+width: 196.35763549804688px;
+left: 1034.059814453125px;
+top: 694px;
+border-radius: 21.079010009765625px;
+font-size: 18px;
+background-color: #213FC4;
+color: white;
+cursor: pointer;
+
+}
+.buttonContainerBill
+{
+display: flex;
+align-items: end;
+padding-bottom: 10px;
+cursor: pointer;
+}
+.buttonContainerBill1
+{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.mainContainerBill
+{
+    background-color:#D9D9D9;
+    height: 100vh;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex;
+    flex-direction: column;
+}
+.footerContainer
+{
+    padding-top: 10px;
+    width:900px;
+    display: flex;
+    flex-direction: row;
+}
+.genreStyle2 {
+    width: 220px;
+    height: 40px;
+    background-color:#213FC4;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+  }
+  .footerButtons
+  {
+    display: flex;
+    flex-direction: row;
+    height:120px;
+    align-items: center !important;
+  }
+  @media (min-width: 312px) and (max-width: 1000px) 
+  {
+    innerBill
+{
+    display: flex;
+    flex-direction: row;
+    border:1px solid blue;
+    width:250px;
+    height:400px;
+    justify-content: space-between;
+}
+
+  }

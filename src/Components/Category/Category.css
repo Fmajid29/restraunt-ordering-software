@@ -1,0 +1,53 @@
+.mainContainerTables
+{
+    background-color:#D9D9D9;
+    height: 100vh;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.innerContainerTable
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+position: absolute;
+width: 400px;
+height: 400px;
+left: 0px;
+top: 0px;
+border: 1px solid black;
+}
+.outerTable
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerTable
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+.categoryStart
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:183px;
+    height:125px;
+    color: white;
+    background-color: #213FC4;
+    border-radius: 32px;
+}
+.innerCategory
+{
+    display: flex;
+    flex-direction: column;
+    border:2px solid #213FC4;
+    width:900px;
+    height:400px;
+    cursor: pointer;
+}

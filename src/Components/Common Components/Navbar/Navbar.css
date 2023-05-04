@@ -1,0 +1,63 @@
+.mainContainerNavbar
+{
+    height: 102px;
+    width: 100%;
+    border-radius: 0px;
+    background-color: #213FC4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.imageContainerNavbar
+{
+    height:102px ;
+    width:20%;
+}
+.logoNavbar
+{
+ height: 100%;
+width: 180px;
+}
+.navbarContent
+{
+font-family: Hind Kochi;
+font-size: 45px;
+font-weight: 400;
+line-height: 75px;
+letter-spacing: 0em;
+text-align: center;
+color: white;
+cursor: pointer;
+}
+.navbarOuter
+{
+    display: flex;
+    justify-content: space-around !important;
+    width:50%;
+}
+
+.navbarOuter
+{
+    display: flex;
+    float:right
+}
+@media (min-width: 312px) and (max-width: 1000px) {
+   .imageContainerNavbar
+   {
+    display: none;
+   }
+   .mainContainerNavbar{
+    display: flex;
+    width:100%;
+    justify-content: center;
+   }
+ .navbarOuter
+ {
+    display: flex;
+    justify-content: center;
+    width:75%
+ }
+  
+  }
+  

@@ -1,7 +1,13 @@
 import React from "react";
+import Navbar from "../Common Components/Navbar/Navbar";
+import "./Tables.css"
+
 
 const Tables = () => {
-  return <div>hello</div>;
+  return(
+    <>
+   </>
+  )
 };
 
 export default Tables;
