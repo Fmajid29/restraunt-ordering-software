@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Bill from "../../Bill/Bill";
 import logo from "../../../Assets/Images/logo.png";
 import "./Navbar.css";
 
@@ -7,6 +8,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/tables");
+  };
+  const handleClick2 = () => {
+    navigate("/bill");
   };
 
   return (
@@ -19,7 +23,7 @@ const Navbar = () => {
           <div onClick={handleClick} className="navbarContent">
             TABLES
           </div>
-          <div className="navbarContent">ORDERS</div>
+          <div className="navbarContent" onClick={handleClick2}>ORDERS</div>
           <div className="navbarContent">LOGOUT </div>
         </div>
       </div>
