@@ -1,0 +1,25 @@
+.tablecircle {
+  width: 160.15px;
+  height: 160.15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.empty {
+  border: 6px solid #686868b6;
+  color: #686868;
+}
+
+.serving {
+  border: 6px solid #f58114a9;
+  color: #f58014;
+}
+
+.paying {
+  border: 6px solid #37901794;
+  color: #379017;
+}

@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.tables {
+  height: 80%;
+  width: 75%;
+  border: 5px solid rgba(83, 83, 224, 0.7);
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 12px;
+}
