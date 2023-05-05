@@ -7,6 +7,7 @@ import Bill from "./Components/Bill";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import Items from "./Components/Items/Items";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/category" element={<Category />} />
         <Route path="/bill" element={<Bill />} />
         <Route path="/tables" element={<Tables />} />
-        <Route path="navbar" element={<Navbar />} />
+        <Route path="/items" element={<Items />} />
       </Routes>
     </BrowserRouter>
   );
