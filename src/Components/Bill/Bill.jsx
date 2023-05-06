@@ -6,10 +6,17 @@ import "./Bill.css";
 const Bill = () => {
   const [value, setValue] = useState(1);
   const [price, setPrice] = useState(786);
+  const [data,setData]=useState(
+    {
+      item_name:"Item Name",
+      price:786
+
+    }
+  )
 
   const handleIncrement = () => {
     setValue(value + 1);
-    setPrice(price + 786);
+    setPrice(price + data.price);
   };
   const handleDecrement = () => {
     setValue(value + -1);
@@ -28,8 +35,8 @@ const Bill = () => {
           <div className="innerBill">
             <div className="p-2">
               <div className="billStyle">
-                <div>
-                  <h className="headingBill"> ITEM NAME</h>
+                <div style={{paddingRight:"25px"}}>
+                  <h className="headingBill">{data.item_name}</h>
                 </div>
                 <div className="flex justify-between">
                   <div onClick={handleIncrement}>
@@ -38,7 +45,7 @@ const Bill = () => {
                   <div>
                     <h className="headingBill px-2">{value}</h>
                   </div>
-                  <div onClick={handleDecrement}>
+                  <div style={{paddingRight:"25px"}} onClick={handleDecrement}>
                     <h className="decrement">-</h>
                   </div>
                 </div>

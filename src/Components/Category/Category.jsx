@@ -3,25 +3,39 @@ import Navbar from "../Common Components/Navbar/Navbar";
 import "./Category.css";
 
 const Category = () => {
+
+  const categories = ['Category'];
+
+function CategoryList() {
+  return (
+    <div>
+      {categories.map(category => (
+     <div className="mainContainerTables">
+     <div className="innerCategory">
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     <div className="category">{categories[0]}</div>
+     
+     </div>
+   </div>
+      ))}
+    </div>
+  );
+}
   return (
     <>
       <div>
         <Navbar />
       </div>
       <div>
-        <div className="mainContainerTables">
-          <div className="innerCategory">
-            <div className="category">Category 1</div>
-            <div className="category">Category 2</div>
-            <div className="category">Category 3</div>
-            <div className="category">Category 4</div>
-            <div className="category">Category 1</div>
-            <div className="category">Category 2</div>
-            <div className="category">Category 3</div>
-            <div className="category">Category 4</div>
-          </div>
-        </div>
+      <CategoryList />
       </div>
+     
     </>
   );
 };
