@@ -48,14 +48,14 @@ const Bill = () => {
               </div>
             </div>
             <div>
-              <img className="delImage" src={Cross} />
+              <img className="delImage" src={Cross} alt="hi" />
             </div>
             <div className="buttonContainerBill">
               <button className="buttonBill">Cancel Order</button>
             </div>
           </div>
           <div className="footerContainer">
-            <div style={{ width: "30%" }}>
+            <div className="footerHeadings">
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div>
                   <h className="headingBill">Total Bill:</h>
@@ -65,10 +65,10 @@ const Bill = () => {
                 </div>
               </div>
               <div>
-                <h className="headingBill">Tax5%</h>
+                <h className="headingBill">Vat 5%</h>
               </div>
               <div>
-                <h className="headingBill"> Total Bill:{taxValue}</h>
+                <h className="headingBill"> Total Bill: {taxValue}</h>
               </div>
             </div>
             <div className="footerButtons">

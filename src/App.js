@@ -1,7 +1,6 @@
 import React from "react";
 import Login from "./Components/Login";
 import Tables from "./Components/Tables/Tables";
-import Navbar from "./Components/Common Components/Navbar/Navbar";
 import Category from "./Components/Category";
 import Bill from "./Components/Bill";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

@@ -1,10 +1,17 @@
+.mainContainerBill {
+  background-color: white;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .innerBill {
   display: flex;
   flex-direction: row;
   border: 5px solid rgba(83, 83, 224, 0.7);
   border-radius: 40px;
-  width: 900px;
-  height: 400px;
+  height: 80%;
+  width: 50%;
   justify-content: space-between;
 }
 .headingBill {
@@ -15,7 +22,6 @@
   border-radius: nullpx;
   color: #213fc4;
   font-size: 35px;
-
   padding-left: 5px;
 }
 .decrement {
@@ -64,20 +70,10 @@
   padding-left: 10px;
   cursor: pointer;
 }
-.mainContainerBill {
-  background-color: #d9d9d9;
-  height: 100vh;
-  display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+.footerContainer {
+  width: 40%;
   display: flex;
   flex-direction: column;
-}
-.footerContainer {
-  padding-top: 10px;
-  width: 900px;
-  display: flex;
-  flex-direction: row;
 }
 .genreStyle2 {
   width: 220px;
@@ -124,4 +120,18 @@
 
 .p-2 {
   padding: 1.2rem;
+}
+
+@media (min-width: 312px) and (max-width: 1000px) {
+  .mainContainerBill {
+    flex-direction: column;
+  }
+  .innerBill {
+    margin-top: 5%;
+    height: 80%;
+    width: 95%;
+  }
+  .footerContainer {
+    width: 95%;
+  }
 }
