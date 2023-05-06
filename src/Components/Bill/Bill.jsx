@@ -6,10 +6,18 @@ import BillItem from "./BillItem";
 
 const Bill = () => {
   const [value, setValue] = useState(1);
-  const [price, setPrice] = useState(786);
-
+  const [data, setData] = useState({ name: "item name", price: 700 });
+  const [price, setPrice] = useState(data.price);
   const newValue = (price / 100) * 5;
   const taxValue = price + newValue;
+
+  const handleIncrement = () => {
+    setValue((pre) => pre + 1);
+    setPrice((pre) => pre + data.price);
+  };
+  const handleDecrement = () => {
+    setValue(value - 1);
+  };
 
   return (
     <>
@@ -20,7 +28,13 @@ const Bill = () => {
         <div className="mainContainerBill">
           <div className="innerBill">
             <div className="billitemlist">
-              <BillItem />
+              <BillItem
+                name={data.name}
+                value={value}
+                price={price}
+                inc={handleIncrement}
+                dec={handleDecrement}
+              />
               <BillItem />
               <BillItem />
             </div>
