@@ -5,8 +5,8 @@ import "./Bill.css";
 import BillItem from "./BillItem";
 
 const Bill = () => {
-  const [value, setValue] = useState(1);
   const [data, setData] = useState({ name: "item name", price: 700 });
+  const [value, setValue] = useState(1);
   const [price, setPrice] = useState(data.price);
   const newValue = (price / 100) * 5;
   const taxValue = price + newValue;
@@ -16,7 +16,8 @@ const Bill = () => {
     setPrice((pre) => pre + data.price);
   };
   const handleDecrement = () => {
-    setValue(value - 1);
+    setValue((pre) => pre - 1);
+    setPrice((pre) => pre - data.price);
   };
 
   return (

@@ -11,7 +11,7 @@ const BillItem = (props) => {
           <button className="decrement" onClick={props.inc}>
             +
           </button>
-          <h className="billitemvalue">{props.value}</h>
+          <h1 className="billitemvalue">{props.value}</h1>
           <button className="decrement" onClick={props.dec}>
             -
           </button>
