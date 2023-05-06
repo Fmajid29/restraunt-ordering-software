@@ -7,7 +7,6 @@
 }
 .innerBill {
   display: flex;
-  flex-direction: row;
   border: 5px solid rgba(83, 83, 224, 0.7);
   border-radius: 40px;
   height: 80%;
@@ -26,16 +25,49 @@
 }
 .decrement {
   color: #213fc4;
+  background: none;
+  border: none;
   font-size: 35px;
   padding-left: 5px !important;
   cursor: pointer;
 }
+
+.billitemlist {
+  width: 70%;
+}
+
 .billStyle {
+  width: 100%;
+  height: 10%;
+  color: rgba(83, 83, 224, 0.7);
+  margin: 2% 0 0 2%;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   border-bottom: 2px SOLID rgba(83, 83, 224, 0.7);
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.billitemname {
+  overflow: hidden;
+  font-size: 1.5rem;
+  width: 55%;
+  height: 80%;
+}
+.quantity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+.billitemvalue {
+  font-size: 1rem;
+}
+
+.delImage {
+  height: 25px;
+  width: 45;
+  cursor: pointer;
 }
 .buttonBill {
   height: 58.109703063964844px;
@@ -91,38 +123,8 @@
   height: 120px;
   align-items: center !important;
 }
-.delImage {
-  height: 25px;
-  width: 45;
-  left: 674.1484375px;
-  top: 199px;
-  border-radius: nullpx;
-  cursor: pointer;
-  padding-top: 25px;
-  padding-right: 80px;
-}
 
-.flex {
-  display: flex;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.px-2 {
-  padding: 0rem 1.2rem;
-}
-
-.py-2 {
-  padding: 1.2rem 0rem;
-}
-
-.p-2 {
-  padding: 1.2rem;
-}
-
-@media (min-width: 312px) and (max-width: 1000px) {
+@media (min-width: 312px) and (max-width: 1300px) {
   .mainContainerBill {
     flex-direction: column;
   }
