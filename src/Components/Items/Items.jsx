@@ -9,7 +9,7 @@ const Items = () => {
       <Navbar />
       <div className="items">
         <div className="itemcontainer">
-          <Item />
+          <Item price="700" />
         </div>
       </div>
     </>
