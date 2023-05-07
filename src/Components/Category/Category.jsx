@@ -4,25 +4,25 @@ import "./Category.css";
 
 const Category = () => {
 
-  const categories = ['Category'];
+  const categories = [
+    {  category: "John" },
+    {  category: "Jane" },
+    {  category: "Bob" },
+    {  category: "John" },
+    {  category: "Jane" },
+    {  category: "Bob" },
+    {  category: "Bob" },
+  ];
 
 function CategoryList() {
   return (
-    <div>
+    <div className="categoryOut">
       {categories.map(category => (
-     <div className="mainContainerTables">
-     <div className="innerCategory">
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     <div className="category">{categories[0]}</div>
-     
-     </div>
-   </div>
+     <div className="category">
+     <h1 className="headingCat">
+      {categories.category}
+     </h1>
+      </div>
       ))}
     </div>
   );
@@ -32,10 +32,11 @@ function CategoryList() {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="mainContainerTables">
+      <div className="innerCategory">
       <CategoryList />
       </div>
-     
+      </div>
     </>
   );
 };

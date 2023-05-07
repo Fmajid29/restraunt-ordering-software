@@ -5,7 +5,6 @@ import "./Bill.css";
 
 const Bill = () => {
   const [value, setValue] = useState(1);
-  const [price, setPrice] = useState(786);
   const [data,setData]=useState(
     {
       item_name:"Item Name",
@@ -13,22 +12,23 @@ const Bill = () => {
 
     }
   )
-
+ 
   const handleIncrement = () => {
     setValue(value + 1);
-    setPrice(price + data.price);
+    setData({ ...data, price:data.price+data.price });
   };
   const handleDecrement = () => {
     setValue(value + -1);
-    setPrice(price - 786);
+    setData({ ...data, price:data.price-data.price });
+
   };
-  const newValue = (price / 100) * 5;
-  const taxValue = price + newValue;
+  const newValue = (data.price / 100) * 5;
+  const taxValue = data.price + newValue;
 
   return (
     <>
       <div>
-        <Navbar />
+        <Navbar /> 
       </div>
       <div>
         <div className="mainContainerBill">
@@ -50,7 +50,7 @@ const Bill = () => {
                   </div>
                 </div>
                 <div>
-                  <h className="headingBill">{price}</h>
+                  <h className="headingBill">{data.price}</h>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Bill = () => {
                   <h className="headingBill">Total Bill:</h>
                 </div>
                 <div>
-                  <h className="headingBill"> {price}</h>
+                  <h className="headingBill"> {data.price}</h>
                 </div>
               </div>
               <div>
