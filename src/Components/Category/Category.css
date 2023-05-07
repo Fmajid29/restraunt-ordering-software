@@ -36,4 +36,20 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 12px;
+  flex-direction: row;
+}
+.categoryOut
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 12px;
+  flex-direction: row;
+}
+.headingCat
+{
+color: white !important   ;
 }
