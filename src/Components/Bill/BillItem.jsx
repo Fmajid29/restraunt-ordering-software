@@ -6,17 +6,17 @@ const BillItem = (props) => {
   return (
     <>
       <div className="billStyle">
-        <h className="billitemname"> {props.name} </h>
+        <h1 className="billitemname"> {props.name} </h1>
         <div className="quantity">
-          <button className="decrement" onClick={props.inc}>
+          <button className="decrement" onClick={() => props.inc(props.id)}>
             +
           </button>
           <h1 className="billitemvalue">{props.value}</h1>
-          <button className="decrement" onClick={props.dec}>
+          <button className="decrement" onClick={() => props.dec(props.id)}>
             -
           </button>
         </div>
-        <h className="billitemvalue">{props.price}</h>
+        <h1 className="billitemvalue">${props.price}</h1>
         <img className="delImage" src={Cross} alt="hi" />
       </div>
     </>

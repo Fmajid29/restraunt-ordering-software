@@ -5,20 +5,56 @@ import "./Bill.css";
 import BillItem from "./BillItem";
 
 const Bill = () => {
-  const [data, setData] = useState({ name: "item name", price: 700 });
-  const [value, setValue] = useState(1);
-  const [price, setPrice] = useState(data.price);
+  const [data, setData] = useState([
+    { id: 0, name: "Item 1", price: 10, quantity: 0 },
+    { id: 1, name: "Item 2", price: 20, quantity: 0 },
+    { id: 2, name: "Item 3", price: 30, quantity: 0 },
+  ]);
+
+  const [price, setPrice] = useState(0);
   const newValue = (price / 100) * 5;
   const taxValue = price + newValue;
 
-  const handleIncrement = () => {
-    setValue((pre) => pre + 1);
-    setPrice((pre) => pre + data.price);
+  const incrementQuantity = (id) => {
+    setData(
+      data.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        }
+        return item;
+      })
+    );
+    setPrice((pre) => pre + data[id].price);
   };
-  const handleDecrement = () => {
-    setValue((pre) => pre - 1);
-    setPrice((pre) => pre - data.price);
+  const handleDecrement = (id) => {
+    setData(
+      data.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            quantity: item.quantity - 1,
+          };
+        }
+        return item;
+      })
+    );
+    setPrice((pre) => pre + data[id].price);
   };
+
+  const billItemList = data.map((dat) => (
+    <BillItem
+      key={dat.id}
+      id={dat.id}
+      name={dat.name}
+      value={dat.quantity}
+      price={dat.price}
+      inc={incrementQuantity}
+      dec={handleDecrement}
+    />
+  ));
 
   return (
     <>
@@ -28,17 +64,7 @@ const Bill = () => {
       <div>
         <div className="mainContainerBill">
           <div className="innerBill">
-            <div className="billitemlist">
-              <BillItem
-                name={data.name}
-                value={value}
-                price={price}
-                inc={handleIncrement}
-                dec={handleDecrement}
-              />
-              <BillItem />
-              <BillItem />
-            </div>
+            <div className="billitemlist">{billItemList}</div>
             <div className="buttonContainerBill">
               <button className="buttonBill">Cancel Order</button>
             </div>
@@ -47,14 +73,14 @@ const Bill = () => {
             <div className="footerHeadings">
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div>
-                  <h className="headingBill">Total Bill:</h>
+                  <h1 className="headingBill">Total Bill:</h1>
                 </div>
                 <div>
-                  <h className="headingBill"> {price}</h>
+                  <h1 className="headingBill"> {price}</h1>
                 </div>
               </div>
               <div>
-                <h className="headingBill">Vat 5%</h>
+                <h1 className="headingBill">Vat 5%</h1>
               </div>
               <div>
                 <h className="headingBill"> Total Bill: {taxValue}</h>
