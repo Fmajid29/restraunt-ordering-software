@@ -9,13 +9,13 @@ const Item = (props) => {
           <h2>${props.price}</h2>
           <div className="inc">
             <div onClick={props.inc}>
-              <h className="decrement">+</h>
+              <h1 className="decrement">+</h1>
             </div>
             <div>
-              <h className="headingBill">{props.value}</h>
+              <h1 className="headingBill">{props.value}</h1>
             </div>
             <div onClick={props.dec}>
-              <h className="decrement">-</h>
+              <h1 className="decrement">-</h1>
             </div>
           </div>
         </div>

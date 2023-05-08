@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../../Assets/Images/logo.png";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -20,47 +20,17 @@ const Login = () => {
       password: userData.password,
     });
     if (res.success) {
-      console.log("logged in");
+      console.log(res.data);
+      localStorage.setItem("access_token", res.data.user.token);
+      navigate("/tables");
     } else {
       console.log("login error");
     }
   };
 
-  useEffect(() => {
-    // axios
-    //   .get("http://127.0.0.1:5500/api/employes", {
-    //     headers: {
-    //       "x-access-token":
-    //         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQWRtaW4iLCJpYXQiOjE2ODM1MzI4MjAsImV4cCI6MTY4MzYxOTIyMH0.diuZ0FiKBV3ONrgsWKDIGQP9fddH3FSzcQ4jR6r2KIQ",
-    //     },
-    //   })
-    //   .then((response) => {
-    //     console.log(response.json());
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-    // fetch("http://127.0.0.1:5500/api/employes", {
-    //   headers: {
-    //     "x-access-token":
-    //       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQWRtaW4iLCJpYXQiOjE2ODM1MzI4MjAsImV4cCI6MTY4MzYxOTIyMH0.diuZ0FiKBV3ONrgsWKDIGQP9fddH3FSzcQ4jR6r2KIQ",
-    //   },
-    // })
-    //   .then((response) => {
-    //     console.log(response.json());
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-  }, []);
-
   const handleOnChange = (event) => {
     const { name, value } = event.target;
     setUserData({ ...userData, [name]: value });
-  };
-
-  const handleClick = () => {
-    navigate("/tables");
   };
 
   return (

@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Common Components/Navbar/Navbar";
+import { getApiWithAuth } from "../../apiurl";
+import { url } from "../../api";
 import "./items.css";
 import Item from "./Item";
 
 const Items = () => {
-  const data = [
-    {
-      id: 1,
-      name: "Item Name",
-      price: 600,
-    },
-    {
-      id: 2,
-      name: "item 2",
-      price: 500,
-    },
-  ];
+  const [Itemdata, setItemData] = useState([]);
+
+  const getData = async () => {
+    const res = await getApiWithAuth(url.ITEM_URL);
+    if (res.success) {
+      console.log(res.data);
+      setItemData(res.data);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   const [value, setValue] = useState(1);
 
   const handleIncrement = () => {
@@ -24,11 +27,11 @@ const Items = () => {
   const handleDecrement = () => {
     setValue((pre) => pre - 1);
   };
-  const itemsList = data.map((dat) => (
+  const itemsList = Itemdata.map((dat) => (
     <Item
-      key={dat.id}
-      name={dat.name}
-      price={dat.price}
+      key={dat.mID}
+      name={dat.ItmName}
+      price={dat.Price}
       value={value}
       inc={handleIncrement}
       dec={handleDecrement}

@@ -83,7 +83,7 @@ const Bill = () => {
                 <h1 className="headingBill">Vat 5%</h1>
               </div>
               <div>
-                <h className="headingBill"> Total Bill: {taxValue}</h>
+                <h1 className="headingBill"> Total Bill: {taxValue}</h1>
               </div>
             </div>
             <div className="footerButtons">
