@@ -19,7 +19,6 @@ const Item = (props) => {
             </div>
           </div>
         </div>
-        <button>add</button>
       </div>
     </>
   );
