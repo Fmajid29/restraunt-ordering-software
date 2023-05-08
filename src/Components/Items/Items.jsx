@@ -16,22 +16,12 @@ const Items = () => {
       price: 500,
     },
   ];
-  const [value, setValue] = useState(1);
-
-  const handleIncrement = () => {
-    setValue((pre) => pre + 1);
-  };
-  const handleDecrement = () => {
-    setValue((pre) => pre - 1);
-  };
+ 
   const itemsList = data.map((dat) => (
     <Item
       key={dat.id}
       name={dat.name}
       price={dat.price}
-      value={value}
-      inc={handleIncrement}
-      dec={handleDecrement}
     />
   ));
   return (

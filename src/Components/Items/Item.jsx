@@ -1,6 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 
 const Item = (props) => {
+  const [value, setValue] = useState(1);
+
+  const handleIncrement = () => {
+    setValue((pre) => pre + 1);
+  };
+  const handleDecrement = () => {
+    setValue((pre) => pre - 1);
+  };
   return (
     <>
       <div className="itemCard">
@@ -8,13 +16,13 @@ const Item = (props) => {
         <div className="random">
           <h2>${props.price}</h2>
           <div className="inc">
-            <div onClick={props.inc}>
+            <div onClick={handleIncrement}>
               <h className="decrement">+</h>
             </div>
             <div>
-              <h className="headingBill">{props.value}</h>
+              <h className="headingBill">{value}</h>
             </div>
-            <div onClick={props.dec}>
+            <div onClick={handleDecrement}>
               <h className="decrement">-</h>
             </div>
           </div>
