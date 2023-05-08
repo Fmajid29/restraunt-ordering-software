@@ -12,7 +12,7 @@ const Item = (props) => {
               <h1 className="decrement">+</h1>
             </div>
             <div>
-              <h1 className="headingBill">{props.value}</h1>
+              <h1 className="itemBill">{props.value}</h1>
             </div>
             <div onClick={props.dec}>
               <h1 className="decrement">-</h1>
