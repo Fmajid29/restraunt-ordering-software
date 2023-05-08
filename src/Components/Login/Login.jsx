@@ -1,17 +1,58 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../Assets/Images/logo.png";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import { postApiWithoutAuth } from "../../apiurl";
+import { url } from "../../api";
 
 const Login = () => {
-  const navigate = useNavigate();
-
   const [userData, setUserData] = useState({
     username: "",
     password: "",
     location: "",
     counter: "",
   });
+  const navigate = useNavigate();
+
+  const postData = async () => {
+    const res = await postApiWithoutAuth(url.LOGIN_URL, {
+      username: userData.username,
+      password: userData.password,
+    });
+    if (res.success) {
+      console.log("logged in");
+    } else {
+      console.log("login error");
+    }
+  };
+
+  useEffect(() => {
+    // axios
+    //   .get("http://127.0.0.1:5500/api/employes", {
+    //     headers: {
+    //       "x-access-token":
+    //         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQWRtaW4iLCJpYXQiOjE2ODM1MzI4MjAsImV4cCI6MTY4MzYxOTIyMH0.diuZ0FiKBV3ONrgsWKDIGQP9fddH3FSzcQ4jR6r2KIQ",
+    //     },
+    //   })
+    //   .then((response) => {
+    //     console.log(response.json());
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    // fetch("http://127.0.0.1:5500/api/employes", {
+    //   headers: {
+    //     "x-access-token":
+    //       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQWRtaW4iLCJpYXQiOjE2ODM1MzI4MjAsImV4cCI6MTY4MzYxOTIyMH0.diuZ0FiKBV3ONrgsWKDIGQP9fddH3FSzcQ4jR6r2KIQ",
+    //   },
+    // })
+    //   .then((response) => {
+    //     console.log(response.json());
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  }, []);
 
   const handleOnChange = (event) => {
     const { name, value } = event.target;
@@ -46,6 +87,7 @@ const Login = () => {
           type="password"
           id="password"
           name="password"
+          onChange={handleOnChange}
         />
       </div>
       <span className="lableStyleDropdown">Counter:</span>
@@ -77,7 +119,7 @@ const Login = () => {
         </select>
       </div>
       <div className="buttonContainer">
-        <button className="loginButton" onClick={handleClick}>
+        <button className="loginButton" onClick={postData}>
           LOG IN
         </button>
       </div>
