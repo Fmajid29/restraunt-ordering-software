@@ -10,7 +10,6 @@ const Tables = () => {
 
   const getData = async () => {
     const res = await getApiWithAuth(url.TABLE_URL);
-    console.log("ahad", res.data.tables);
     if (res.success) {
       setTableData(res.data.tables);
     }
@@ -20,7 +19,7 @@ const Tables = () => {
   }, []);
 
   const tableList = tableData.map((data) => (
-    <Table tableState={"empty"} tableNumber={data.TableNo} />
+    <Table key={data.TableNo} tableState={"empty"} tableNumber={data.TableNo} />
   ));
   return (
     <>

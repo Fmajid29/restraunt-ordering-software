@@ -25,7 +25,6 @@ export const postApiWithoutAuth = async (url, body) => {
 
 export const getApiWithAuth = async (url) => {
   try {
-    console.log(getToken());
     const response = await baseInstance.get(url, {
       headers: {
         "x-access-token": getToken(),
