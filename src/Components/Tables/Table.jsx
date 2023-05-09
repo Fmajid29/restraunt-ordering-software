@@ -14,7 +14,7 @@ const Table = (props) => {
 
   return (
     <div className={"tablecircle " + tableState} onClick={handleClick}>
-      Table# {props.tableNumber}
+      {props.tableNumber}
     </div>
   );
 };

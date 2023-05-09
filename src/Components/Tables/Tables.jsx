@@ -20,7 +20,7 @@ const Tables = () => {
   }, []);
 
   const tableList = tableData.map((data) => (
-    <Table tableState={"serving"} tableNumber={data.TableNo} />
+    <Table tableState={"empty"} tableNumber={data.TableNo} />
   ));
   return (
     <>
