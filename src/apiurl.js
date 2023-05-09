@@ -32,7 +32,7 @@ export const getApiWithAuth = async (url) => {
       },
     });
     return {
-      data: response.data.items,
+      data: response.data,
       success: true,
     };
   } catch (error) {

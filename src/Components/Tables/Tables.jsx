@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Common Components/Navbar/Navbar";
-import "./Tables.css";
+import { getApiWithAuth } from "../../apiurl";
+import { url } from "../../api";
 import Table from "./Table";
+import "./Tables.css";
 
 const Tables = () => {
+  const [tableData, setTableData] = useState([{}]);
+
+  const getData = async () => {
+    const res = await getApiWithAuth(url.TABLE_URL);
+    console.log("ahad", res.data.tables);
+    if (res.success) {
+      setTableData(res.data.tables);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const tableList = tableData.map((data) => (
+    <Table tableState={"serving"} tableNumber={data.TableNo} />
+  ));
   return (
     <>
       <Navbar />
       <div className="container">
-        <div className="tables">
-          <Table tableState={"serving"} tableNumber="1" />
-          <Table tableState={"empty"} tableNumber="2" />
-          <Table tableState={"paying"} tableNumber="3" />
-          <Table tableState={"serving"} tableNumber="4" />
-          <Table tableState={"empty"} tableNumber="5" />
-          <Table tableState={"serving"} tableNumber="6" />
-        </div>
+        <div className="tables">{tableList}</div>
       </div>
     </>
   );

@@ -11,8 +11,7 @@ const Items = () => {
   const getData = async () => {
     const res = await getApiWithAuth(url.ITEM_URL);
     if (res.success) {
-      console.log(res.data);
-      setItemData(res.data);
+      setItemData(res.data.items);
     }
   };
   useEffect(() => {
